@@ -8,19 +8,20 @@ class Ball(Turtle):
         self.penup()
         self.shape("circle")
         self.color("white")
-        self.y_direction = 1
-        self.x_direction = 1
+        self.x_movement = 1
+        self.y_movement = 0
         self.goto(0, 0)
 
         self.random_start()
 
     def random_start(self):
-        self.x_direction = random.choice([-1, 1])
-        self.y_direction = random.choice([-1, 1])
+        pass
 
     def move(self):
-        self.goto(self.xcor() + (5*self.x_direction), self.ycor() + (5*self.y_direction))
+        self.goto(self.xcor() + self.x_movement, self.ycor() + self.y_movement)
 
-    def bounce(self):
-        self.y_direction *= -1
+    def wall_bounce(self):
+        self.y_movement *= -1
 
+    def paddle_bounce(self):
+        self.x_movement *= -1
