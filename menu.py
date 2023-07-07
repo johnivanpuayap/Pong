@@ -10,8 +10,11 @@ class Menu(Turtle):
         self.draw_menu()
 
     def draw_menu(self):
-        self.goto(0, 200)
-        self.write(f"Pong", True, align="center", font=("Courier", 60, "normal"))
+        self.goto(0, 240)
+        self.write(f"Spade Productions", True, align="center", font=("Courier", 20, "normal"))
+
+        self.goto(0, 0)
+        self.write(f"Pong", True, align="center", font=("Courier", 80, "normal"))
 
         self.goto(0, -200)
         self.write(f"Press 'p' or 'P' to start Playing", True, align="center", font=("Courier", 12, "normal"))
