@@ -16,6 +16,7 @@ class Ball(Turtle):
         self.random_start()
 
     def random_start(self):
+        self.goto(0, random.randint(-280, 280))
         self.x_movement *= random.choice([-1, 1])
         self.y_movement *= random.choice([-1, 1])
 

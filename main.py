@@ -43,9 +43,11 @@ def start_game():
 
     screen.exitonclick()
 
+
 def play_game():
     if is_on_menu:
         start_game()
+
 
 def continue_game():
     player_one.reset()
