@@ -34,4 +34,5 @@ class Ball(Turtle):
         self.random_start()
 
     def increase_speed(self):
-        self.ball_speed -= 0.001
+        if self.ball_speed - 0.001 >= 0:
+            self.ball_speed -= 0.001
