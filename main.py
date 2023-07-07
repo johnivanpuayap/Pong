@@ -2,6 +2,7 @@ import time
 from turtle import Screen
 from paddle import Paddle
 from ball import Ball
+from scoreboard import Scoreboard
 
 screen = Screen()
 screen.setup(width=800, height=600)
@@ -26,6 +27,9 @@ screen.listen()
 
 # Create Ball
 ball = Ball()
+
+# Create Scoreboard
+score = Scoreboard()
 
 is_game_on = True
 
