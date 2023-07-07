@@ -7,6 +7,8 @@ from menu import Menu
 
 
 def start_game():
+    global is_on_menu
+    is_on_menu = False
     menu.clear()
     score.draw_board()
     is_game_on = True
@@ -41,6 +43,9 @@ def start_game():
 
     screen.exitonclick()
 
+def play_game():
+    if is_on_menu:
+        start_game()
 
 def continue_game():
     player_one.reset()
@@ -83,8 +88,8 @@ screen.onkey(continue_game, "C")
 screen.onkey(continue_game, "c")
 screen.onkey(restart_game, "R")
 screen.onkey(restart_game, "r")
-screen.onkey(start_game, "P")
-screen.onkey(start_game, "p")
+screen.onkey(play_game, "P")
+screen.onkey(play_game, "p")
 screen.listen()
 
 # Create Ball
