@@ -40,12 +40,20 @@ def start_game():
 
 
 def continue_game():
+    player_one.reset()
+    player_two.reset()
+    ball.reset()
+    score.continue_score()
     start_game()
 
+
 def restart_game():
-    scoreboard.reset()
-    paddle.reset()
+    player_one.reset()
+    player_two.reset()
     ball.reset()
+    score.reset()
+    start_game()
+
 
 screen = Screen()
 screen.setup(width=800, height=600)
@@ -79,6 +87,5 @@ ball = Ball()
 
 # Create Scoreboard
 score = Scoreboard()
-
 
 start_game()

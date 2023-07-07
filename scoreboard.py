@@ -44,11 +44,15 @@ class Scoreboard(Turtle):
             self.player_two_score += 1
 
         self.goto(0, -20)
-        self.write("Press 'r' or 'R' to continue playing again!", True, align="center", font=("Courier", 12, "normal"))
+        self.write("Press 'c' or 'C' to continue playing again!", True, align="center", font=("Courier", 12, "normal"))
         self.goto(0, -40)
-        self.write("Press 'e' or 'E' to exit!", True, align="center", font=("Courier", 12, "normal"))
+        self.write("Press 'r' or 'R' to restart the game!", True, align="center", font=("Courier", 12, "normal"))
 
-    def reset(self):
+    def continue_score(self):
+        self.clear()
+        self.draw_board()
+
+    def reset_score(self):
         self.clear()
         self.player_one_score = 0
         self.player_two_score = 0

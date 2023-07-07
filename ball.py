@@ -15,7 +15,8 @@ class Ball(Turtle):
         self.random_start()
 
     def random_start(self):
-        pass
+        self.x_movement *= random.choice([-1, 1])
+        self.y_movement *= random.choice([-1, 1])
 
     def move(self):
         self.goto(self.xcor() + self.x_movement, self.ycor() + self.y_movement)
@@ -25,3 +26,7 @@ class Ball(Turtle):
 
     def paddle_bounce(self):
         self.x_movement *= -1
+
+    def reset(self):
+        self.goto(0, 0)
+        self.random_start()
