@@ -17,7 +17,7 @@ def start_game():
         ball.move()
 
         # Detect collision with wall
-        if ball.ycor() == 300 or ball.ycor() == -300:
+        if ball.ycor() == 290 or ball.ycor() == -290:
             ball.wall_bounce()
 
         # Detect collision with puddle
