@@ -13,6 +13,7 @@ def start_game():
 
     while is_game_on:
         screen.update()
+        time.sleep(0.005)
         ball.move()
 
         # Detect collision with wall
