@@ -9,7 +9,7 @@ class Ball(Turtle):
         self.shape("circle")
         self.color("white")
         self.x_movement = 1
-        self.y_movement = 0
+        self.y_movement = 1
         self.goto(0, 0)
 
         self.random_start()
