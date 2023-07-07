@@ -14,11 +14,9 @@ class Paddle(Turtle):
         self.setheading(90)
 
     def move_up(self):
-        print("Moving Up")
         self.forward(100)
 
     def move_down(self):
-        print("Moving Down")
         self.backward(100)
 
     def reset(self):

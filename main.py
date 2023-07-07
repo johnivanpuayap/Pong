@@ -27,14 +27,12 @@ def start_game():
 
         # Detect if a user score
         if ball.xcor() >= 380:
-            print("Player one scored")
             score.add_score('1')
             score.update_score()
             screen.update()
             is_game_on = False
 
         if ball.xcor() <= -380:
-            print("Player two scored")
             score.add_score('2')
             score.update_score()
             screen.update()
