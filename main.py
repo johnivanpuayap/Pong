@@ -51,7 +51,7 @@ def restart_game():
     player_one.reset()
     player_two.reset()
     ball.reset()
-    score.reset()
+    score.reset_score()
     start_game()
 
 
