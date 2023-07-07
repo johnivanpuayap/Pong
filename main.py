@@ -13,7 +13,7 @@ def start_game():
 
     while is_game_on:
         screen.update()
-        time.sleep(0.005)
+        time.sleep(ball.ball_speed)
         ball.move()
 
         # Detect collision with wall
@@ -24,6 +24,7 @@ def start_game():
         if ball.distance(player_one) < 50 and ball.xcor() < -340 or (
                 ball.distance(player_two) < 50 and ball.xcor() > 340):
             ball.paddle_bounce()
+            ball.increase_speed()
 
         # Detect if a user score
         if ball.xcor() >= 380:
@@ -92,6 +93,7 @@ ball = Ball()
 # Create Scoreboard
 score = Scoreboard()
 
+is_on_menu = True
 menu = Menu()
 
 screen.exitonclick()

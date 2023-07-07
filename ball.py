@@ -10,6 +10,7 @@ class Ball(Turtle):
         self.color("white")
         self.x_movement = 1
         self.y_movement = 1
+        self.ball_speed = 0.005
         self.goto(0, 0)
 
         self.random_start()
@@ -29,4 +30,8 @@ class Ball(Turtle):
 
     def reset(self):
         self.goto(0, 0)
+        self.ball_speed = 0.005
         self.random_start()
+
+    def increase_speed(self):
+        self.ball_speed -= 0.001
