@@ -3,9 +3,12 @@ from turtle import Screen
 from paddle import Paddle
 from ball import Ball
 from scoreboard import Scoreboard
+from menu import Menu
 
 
 def start_game():
+    menu.clear()
+    score.draw_board()
     is_game_on = True
 
     while is_game_on:
@@ -80,6 +83,8 @@ screen.onkey(continue_game, "C")
 screen.onkey(continue_game, "c")
 screen.onkey(restart_game, "R")
 screen.onkey(restart_game, "r")
+screen.onkey(start_game, "P")
+screen.onkey(start_game, "p")
 screen.listen()
 
 # Create Ball
@@ -88,4 +93,6 @@ ball = Ball()
 # Create Scoreboard
 score = Scoreboard()
 
-start_game()
+menu = Menu()
+
+screen.exitonclick()

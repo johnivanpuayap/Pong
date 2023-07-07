@@ -9,7 +9,6 @@ class Scoreboard(Turtle):
         self.color('white')
         self.player_one_score = 0
         self.player_two_score = 0
-        self.draw_board()
 
     def draw_board(self):
         self.goto(0, -300)
